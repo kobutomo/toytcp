@@ -3,12 +3,10 @@ services:
   ubuntu:
     build:
       context: .
-      args: 
+      args:
         GIT_USER: ${GIT_USER}
         GIT_EMAIL: ${GIT_EMAIL}
     privileged: true
-    ports:
-      - "50000:50000"
     volumes:
       - .:/root/toytcp
     tty: true
