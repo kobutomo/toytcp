@@ -1,0 +1,14 @@
+version: "3"
+services:
+  ubuntu:
+    build:
+      context: .
+      args: 
+        GIT_USER: ${GIT_USER}
+        GIT_EMAIL: ${GIT_EMAIL}
+    privileged: true
+    ports:
+      - "50000:50000"
+    volumes:
+      - .:/root/toytcp
+    tty: true
